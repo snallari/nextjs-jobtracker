@@ -9,6 +9,7 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import {useState } from 'react';
 import UploadFileComponent from './UploadFileComponent'
+import ATSReplaceComponent from './ATSReplaceComponent'
 
 const steps = [
     {
@@ -61,8 +62,7 @@ export default function HorizontalLinearAlternativeLabelStepper() {
                     activeStep==0?
                     <UploadFileComponent description={steps[activeStep].description} />:
                     activeStep==1?
-                    <Typography>{steps[activeStep].description}</Typography>:
-
+                    <ATSReplaceComponent description={steps[activeStep].description}/>:
                     <Typography>{steps[activeStep].description}</Typography>
                 }
                 <Button onClick={handleBack} disabled={activeStep === 0}>
